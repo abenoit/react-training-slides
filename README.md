@@ -2,7 +2,61 @@
 
 ## Contents
 
-TBD
+#### Introduction to React
+
+- History
+- What does React resolve ?
+- What is React ?
+- Separation of concerns
+- Virtual DOM
+- Components oriented
+
+#### Exercice
+
+For the introduction :
+
+- First exercice simple without React for the introduction
+- Same exercice with react
+- Same exercice with webpack
+
+For the beginner course
+
+- A first component in an application without any props or nothing
+- Enrich this component gradually as the training is going on
+
+#### A quick reminder to ES6 (what is relevant in this training anyway)
+
+- Arrow function
+- Let & Const
+- fetch
+- Spread operator
+
+#### Tooling
+
+- Prettier & ESLint
+- Webpack
+- Babel
+- Devtools
+
+#### Beginner stage
+
+- Proptypes
+- Reusability
+- Lists & key props
+- Conditional rendering
+- className & inline style
+- Event handling
+- State
+- Event handling with state management
+- Dumb & Smart components
+- Lifecycle
+- Refs
+
+#### Testing
+
+- Snapshot
+- Jest
+- Enzyme
 
 ## References
 
