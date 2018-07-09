@@ -1,0 +1,13 @@
+// Fetch the exercices repository
+git clone TODO
+
+cd react-exercices
+
+// Install all the dependancies 
+npm install
+
+// Let's begin at the beginning
+git checkout tp1
+
+// Go go go ! 
+npm start

@@ -1,0 +1,21 @@
+import React, { Component } from "react";
+import PropTypes from 'prop-types';
+
+const propTypes = {
+  name: PropTypes.string.isRequired,
+  color: PropTypes.string
+}
+
+const defaultProps = {
+  color: "purple"
+}
+
+class Unicorn extends Component {
+  render() {
+    return (<div>Hi there, I am {this.props.name} and I am {this.props.color}</div>);
+  }
+}
+
+Unicorn.propTypes = propTypes;
+Unicorn.defaultProps = defaultProps;
+export default Unicorn;

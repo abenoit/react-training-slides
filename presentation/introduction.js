@@ -21,7 +21,11 @@ const images = {
   backbone: require("../assets/images/backbone.png"),
   react: require("../assets/images/react.png"),
   knockout: require("../assets/images/knockout.png"),
-  meteor: require("../assets/images/meteor.png")
+  meteor: require("../assets/images/meteor.png"),
+  facebook: require("../assets/images/facebook.png"),
+  separationOfConcernsMeme: require("../assets/images/separationConcerns.jpg"),
+  separationOfConcerns: require("../assets/images/separationOfConcerns.png"),
+  componentsEverywhere: require("../assets/images/componentsEverywhere.jpg")
 };
 
 preloader(images);
@@ -133,71 +137,101 @@ export default (
       <Heading size={1} fit caps lineHeight={1} textColor="secondary">
         What is React ?
       </Heading>
+      <Heading caps size={6} textColor="tertiary">
+        (and why it's awesome)
+      </Heading>
     </Slide>
 
     <Slide bgColor="primary">
-      <Text margin="10px 0 0" textColor="tertiary" size={1}>
-        Open Source Javascript library.
-      </Text>
-      <Text margin="10px 0 0" textColor="tertiary" size={1}>
-        Designed by Facebook.
-      </Text>
-      <Text margin="10px 0 0" textColor="tertiary" size={1} padding="20px 0">
-        <i className="material-icons">open_in_new</i> First version released in
-        2013
-      </Text>
-      <Text
-        margin="10px 0 0"
-        textColor="secondary"
-        padding="50px 0 0 0"
-        size={1}
-      >
-        <i className="material-icons">timer</i> providing the best possible
-        rendering performance
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <Text textColor="tertiary" size={1} style={{ width: "33%" }}>
+          <b>Open Source</b> Javascript library.
+        </Text>
+        <Image src={images.facebook} style={{ width: "33%" }} />
+        <Text textColor="tertiary" style={{ width: "33%" }}>
+          First released in <b>2013</b>
+        </Text>
+      </div>
+    </Slide>
+
+    <Slide bgColor="primary">
+      <Text textColor="secondary">
+        Aim: providing the best possible rendering performance
       </Text>
     </Slide>
 
-    <Slide transition={["zoom"]} bgColor="primary">
-      <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-        Why React ?
+    <Slide bgColor="primary">
+      <Heading size={4} textColor="tertiary">
+        Virtual DOM
       </Heading>
       <List>
-        <ListItem>DOM Operation quite expensive --> Virtual DOM</ListItem>
-        <ListItem>Only the concerned area is refreshed when necessary</ListItem>
-        <ListItem>Used by Facebook - tried and tested !</ListItem>
-        <ListItem>Easy and useful for DOM interactions</ListItem>
-        <ListItem>Each component brings its own functionnal behaviour</ListItem>
+        <ListItem padding="20px 0">A copy of the real DOM</ListItem>
+        <ListItem padding="20px 0">Changes impacts the Virtual DOM</ListItem>
+        <ListItem padding="20px 0">Snapshots checking</ListItem>
+        <ListItem padding="20px 0">Only the concerned DOM is changed</ListItem>
       </List>
     </Slide>
 
-    <Slide transition={["fade"]} bgColor="secondary">
-      <Text margin="10px 0 0" textColor="primary" size={0.5} fit bold>
-        How can it be so fast ?
+    <Slide bgColor="primary">
+      <Heading size={4} textColor="tertiary">
+        Component based
+      </Heading>
+      <Image src={images.componentsEverywhere} padding="50px 0" />
+    </Slide>
+
+    <Slide bgColor="primary">
+      <Text textColor="secondary">
+        TODO: example of an interface with a template of all components in it
       </Text>
     </Slide>
 
-    <Slide transition={["fade"]} bgColor="secondary">
-      <Text margin="10px 0 0" textColor="primary" size={0.5} fit bold>
-        React uses the virtual DOM
-      </Text>
+    <Slide bgColor="primary">
+      <Image src={images.separationOfConcernsMeme} width="800px" />
     </Slide>
 
-    <Slide transition={["fade"]} bgColor="primary">
-      <Text margin="10px 0 0" textColor="secondary" size={0.5} fit bold>
-        Why React ?
-      </Text>
+    <Slide bgColor="primary">
+      <Image src={images.separationOfConcerns} width="800px" />
     </Slide>
 
-    <Slide transition={["fade"]} bgColor="primary">
-      <Text margin="10px 0 0" textColor="secondary" size={0.5} fit bold>
-        Is just
-      </Text>
+    <Slide bgColor="primary">
+      <Heading size={4}>Each component is</Heading>
+      <List>
+        <ListItem>Composable</ListItem>
+        <ListItem>Reusable</ListItem>
+        <ListItem>Testable</ListItem>
+        <ListItem>Maintenable</ListItem>
+      </List>
     </Slide>
 
-    <Slide transition={["fade"]} bgColor="primary">
-      <Text margin="10px 0 0" textColor="secondary" size={0.5} fit bold>
-        Components vs Templates
-      </Text>
+    <Slide bgColor="primary">
+      <Heading size={4}>A normal component</Heading>
+      <CodePane
+        transition={[]}
+        lang="javascript"
+        source={require("raw-loader!../assets/code/component.example")}
+      />
+    </Slide>
+
+    <Slide bgColor="primary">
+      <Heading size={4}>A normal component with props</Heading>
+      <CodePane
+        transition={[]}
+        lang="javascript"
+        source={require("raw-loader!../assets/code/component2.example")}
+      />
+    </Slide>
+
+    <Slide bgColor="primary">
+      <Heading size={4}>Composition of components </Heading>
+      <CodePane
+        transition={[]}
+        lang="javascript"
+        source={require("raw-loader!../assets/code/componentComposition.example")}
+      />
+    </Slide>
+
+    <Slide bgColor="primary">
+      <Heading size={4}>Let's play !</Heading>
     </Slide>
   </SlideSet>
 );
