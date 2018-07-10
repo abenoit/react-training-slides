@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Unicorn extends Component {
 
   render() {
-    return (<div>Twilight Sparkle</div>);
+    return <div>Twilight Sparkle</div>;
   }
 
 }

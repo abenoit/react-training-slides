@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Introduction from "./introduction";
 import BasicExercices from "./exercices.basic";
+import Tools from "./tools";
 
 import createTheme from "spectacle/lib/themes/default";
 import { Deck } from "spectacle";
@@ -30,6 +31,7 @@ export default class Presentation extends Component {
       >
         {Introduction}
         {BasicExercices}
+        {Tools}
       </Deck>
     );
   }

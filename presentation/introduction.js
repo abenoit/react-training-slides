@@ -25,7 +25,9 @@ const images = {
   facebook: require("../assets/images/facebook.png"),
   separationOfConcernsMeme: require("../assets/images/separationConcerns.jpg"),
   separationOfConcerns: require("../assets/images/separationOfConcerns.png"),
-  componentsEverywhere: require("../assets/images/componentsEverywhere.jpg")
+  componentsEverywhere: require("../assets/images/componentsEverywhere.jpg"),
+  todolist: require("../assets/images/todolist.jpg"),
+  todolistcomponents: require("../assets/images/componentstodolist.png")
 };
 
 preloader(images);
@@ -84,6 +86,7 @@ export default (
         Bind data to HTML
       </Heading>
       <CodePane
+        textSize={30}
         transition={[]}
         lang="javascript"
         source={require("raw-loader!../assets/code/old.data.example")}
@@ -95,6 +98,7 @@ export default (
         Events management
       </Heading>
       <CodePane
+        textSize={30}
         transition={[]}
         lang="javascript"
         source={require("raw-loader!../assets/code/old.events.example")}
@@ -103,7 +107,7 @@ export default (
 
     <Slide transition={["fade"]} bgColor="tertiary">
       <Heading size={4} textColor="primary" caps>
-        Libraries were here to help
+        Libraries helped a little
       </Heading>
       <div style={{ display: "flex" }}>
         <Image src={images.jquery} width="150px" height="150px" />
@@ -180,9 +184,11 @@ export default (
     </Slide>
 
     <Slide bgColor="primary">
-      <Text textColor="secondary">
-        TODO: example of an interface with a template of all components in it
-      </Text>
+      <Image src={images.todolist} width="800px" />
+    </Slide>
+
+    <Slide bgColor="primary">
+      <Image src={images.todolistcomponents} width="800px" />
     </Slide>
 
     <Slide bgColor="primary">
@@ -206,6 +212,7 @@ export default (
     <Slide bgColor="primary">
       <Heading size={4}>A normal component</Heading>
       <CodePane
+        textSize={25}
         transition={[]}
         lang="javascript"
         source={require("raw-loader!../assets/code/component.example")}
@@ -213,8 +220,9 @@ export default (
     </Slide>
 
     <Slide bgColor="primary">
-      <Heading size={4}>A normal component with props</Heading>
+      <Heading size={6}>A normal component with props</Heading>
       <CodePane
+        textSize={20}
         transition={[]}
         lang="javascript"
         source={require("raw-loader!../assets/code/component2.example")}
@@ -224,14 +232,11 @@ export default (
     <Slide bgColor="primary">
       <Heading size={4}>Composition of components </Heading>
       <CodePane
+        textSize={22}
         transition={[]}
         lang="javascript"
         source={require("raw-loader!../assets/code/componentComposition.example")}
       />
-    </Slide>
-
-    <Slide bgColor="primary">
-      <Heading size={4}>Let's play !</Heading>
     </Slide>
   </SlideSet>
 );
