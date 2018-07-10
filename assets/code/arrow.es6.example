@@ -1,0 +1,17 @@
+// ES5
+function meow (catName) {
+  console.log(`${catName}` says meow);
+}
+
+// ES6
+const meow = catName => { console.log(`${catName}` says meow); }
+
+
+// ES5
+function hello (catName, age) {
+  return `I am ${catName}` and I am $`{age}`;
+}
+
+// ES6
+const hello = (catName, age) => `I am ${catName}` and I am $`{age}`;
+

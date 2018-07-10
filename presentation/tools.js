@@ -7,7 +7,8 @@ const images = {
   eslint: require("../assets/images/eslint.jpg"),
   prettier: require("../assets/images/prettier.png"),
   meme: require("../assets/images/eslintorprettier.jpg"),
-  babel: require("../assets/images/babel.png")
+  babel: require("../assets/images/babel.png"),
+  webpack: require("../assets/images/webpack.png")
 };
 
 preloader(images);
@@ -57,6 +58,11 @@ export default (
     <Slide transition={["zoom"]} bgColor="primary">
       <Image src={images.babel} />
       <Text padding="20px 0">Javascript compiler</Text>
+    </Slide>
+
+    <Slide transition={["zoom"]} bgColor="primary">
+      <Image src={images.webpack} />
+      <Text padding="20px 0">Bundles all your resources</Text>
     </Slide>
 
     <Slide transition={["zoom"]} bgColor="primary">

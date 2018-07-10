@@ -1,0 +1,5 @@
+fetch('http://swapi.co/api/planets/1/')
+.then( response => response.json().then(json => {
+      // traitement du JSON
+    });
+})

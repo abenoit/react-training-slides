@@ -1,5 +1,5 @@
 import React from "react";
-import { CodePane, SlideSet, Heading, Slide } from "spectacle";
+import { CodePane, List, ListItem, SlideSet, Heading, Slide } from "spectacle";
 
 export default (
   <SlideSet>
@@ -29,8 +29,15 @@ export default (
 
     <Slide transition={["zoom"]} bgColor="tertiary">
       <Heading size={3} textColor="primary">
-        TODO : exercice statement
+        Exercice statement
       </Heading>
+      <List ordered textColor="primary">
+        <ListItem padding="20px 0">Create a cat in the App</ListItem>
+        <ListItem padding="20px 0">
+          Use propTypes to make name, age and meows per hour variables
+        </ListItem>
+        <ListItem padding="20px 0">Create different cats</ListItem>
+      </List>
     </Slide>
   </SlideSet>
 );
