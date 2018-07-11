@@ -1,0 +1,24 @@
+import React, { Component } from "react";
+import PropTypes from 'prop-types';
+
+class Unicorn extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      flying: false
+    }
+  }
+
+  fly() {
+    this.setState({flying: true});
+  }
+
+  render() {
+    return 
+      <div>
+        <button onclick={this.fly}> Fly </button>;
+        <p>{this.state.flying}</p>
+      </div>
+  }
+}

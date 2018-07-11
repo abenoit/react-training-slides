@@ -1,5 +1,5 @@
 import React from "react";
-import { List, ListItem, SlideSet, Heading, Slide } from "spectacle";
+import { CodePane, List, ListItem, SlideSet, Heading, Slide } from "spectacle";
 
 export default (
   <SlideSet>
@@ -11,14 +11,32 @@ export default (
 
     <Slide transition={["zoom"]} bgColor="tertiary">
       <Heading size={3} textColor="primary">
-        Exercice statement - Testing !
+        State
       </Heading>
-      <List ordered textColor="primary">
-        <ListItem padding="20px 0">
-          Add a color and style the cat's name according its color
+      <CodePane
+        textSize={18}
+        transition={[]}
+        lang="javascript"
+        source={require("raw-loader!../assets/code/component.state.example")}
+      />
+    </Slide>
+
+    <Slide transition={["zoom"]} bgColor="tertiary">
+      <Heading size={3} textColor="primary">
+        Exercice statement
+      </Heading>
+      <List ordered>
+        <ListItem padding="20px 0" textColor="primary">
+          Create a meows counter using Cat's state
         </ListItem>
-        <ListItem padding="20px 0">
-          Create an array of cats and display them using a map function
+        <ListItem padding="20px 0" textColor="primary">
+          Increment meows' counter each time the "Meow" button is clicked
+        </ListItem>
+        <ListItem padding="20px 0" textColor="primary">
+          Meows are not permitted when meows reaches meowsPerHour
+        </ListItem>
+        <ListItem padding="20px 0" textColor="primary">
+          BONUS: set a special color if maximum meows is reached
         </ListItem>
       </List>
     </Slide>
