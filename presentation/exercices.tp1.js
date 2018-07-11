@@ -11,6 +11,18 @@ export default (
 
     <Slide transition={["fade"]} bgColor="tertiary">
       <Heading size={4} textColor="primary" caps>
+        Props checking and passing
+      </Heading>
+      <CodePane
+        textSize={20}
+        transition={[]}
+        lang="javascript"
+        source={require("raw-loader!../assets/code/component.props.example")}
+      />
+    </Slide>
+
+    <Slide transition={["fade"]} bgColor="tertiary">
+      <Heading size={4} textColor="primary" caps>
         Instructions
       </Heading>
       <CodePane

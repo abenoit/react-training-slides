@@ -11,7 +11,7 @@ export default (
 
     <Slide transition={["zoom"]} bgColor="tertiary">
       <Heading size={3} textColor="primary">
-        Exercice statement
+        Exercice statement - Testing !
       </Heading>
       <List ordered textColor="primary">
         <ListItem padding="20px 0">
