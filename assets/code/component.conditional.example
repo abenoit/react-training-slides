@@ -1,0 +1,8 @@
+class Greeting extends Component {
+  render() {
+    {this.props.isLoggedIn ? 
+      <UserGreeting /> : 
+      <GuestGreeting />
+    }
+  }
+}

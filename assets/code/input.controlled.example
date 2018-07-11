@@ -1,0 +1,22 @@
+class Form extends Component {
+  constructor() {
+    super();
+    
+    this.state = { name: '' };
+  }
+
+  handleNameChange = event => {
+    this.setState({ name: event.target.value });
+  };
+
+  render() {
+    return (
+      <div>
+        <input
+          value={this.state.name}
+          onChange={this.handleNameChange}
+        />
+      </div>
+    );
+  }
+}

@@ -1,0 +1,15 @@
+class Form extends Component {
+  handleSubmit = () => {
+    const name = this.name.value;
+    // do something with `name`
+  }
+
+  render() {
+    return (
+      <div>
+        <input type="text" ref={input => this.name = input} />
+        <button onClick={this.handleSubmit}>Sign up</button>
+      </div>
+    );
+  }
+}
