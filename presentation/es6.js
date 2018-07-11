@@ -1,5 +1,13 @@
 import React from "react";
-import { CodePane, List, ListItem, SlideSet, Heading, Slide } from "spectacle";
+import {
+  CodePane,
+  List,
+  ListItem,
+  SlideSet,
+  Heading,
+  Slide,
+  Text
+} from "spectacle";
 
 export default (
   <SlideSet>
@@ -30,11 +38,26 @@ export default (
       <Heading size={4} textColor="primary" caps>
         Arrow function
       </Heading>
+      <Text textColor="primary">
+        <i>this</i> is not linked to the arrow function
+      </Text>
       <CodePane
         textSize={20}
         transition={[]}
         lang="javascript"
         source={require("raw-loader!../assets/code/arrow.es6.example")}
+      />
+    </Slide>
+
+    <Slide transition={["zoom"]} bgColor="tertiary">
+      <Heading size={4} textColor="primary" caps>
+        Destructuring
+      </Heading>
+      <CodePane
+        textSize={25}
+        transition={[]}
+        lang="javascript"
+        source={require("raw-loader!../assets/code/destructuring.es6.example")}
       />
     </Slide>
 
@@ -52,7 +75,7 @@ export default (
 
     <Slide transition={["zoom"]} bgColor="tertiary">
       <Heading size={4} textColor="primary" caps>
-        Fetch
+        Fetch, async, await
       </Heading>
       <CodePane
         textSize={25}

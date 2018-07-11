@@ -1,17 +1,15 @@
 // ES5
-function meow (catName) {
-  console.log(`${catName}` says meow);
-}
+var self = this;
+
+this.cats.forEach(function(cat) {
+  if (cat.name === "Kitty") {
+    self.kitties.push(cat);
+  }
+})
 
 // ES6
-const meow = catName => { console.log(`${catName}` says meow); }
-
-
-// ES5
-function hello (catName, age) {
-  return `I am ${catName}` and I am $`{age}`;
-}
-
-// ES6
-const hello = (catName, age) => `I am ${catName}` and I am $`{age}`;
-
+this.cats.forEach(cat => { 
+  if (cat.name === "Kitty") {
+    this.kitties.push(cat);
+  }
+})

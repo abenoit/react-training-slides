@@ -4,11 +4,15 @@ const cat = {
   color: "black"
 }
 
-// color will extract its value from cat
-const { color } = cat; 
-console.log(color); // "black"
-
-// rest will get all the cat object except the properties before
-// needs a babel plugin 
 const {color, ...rest} = cat;
 console.log(rest); // { name: "Kitty", age: 2 }
+
+const cats = [{
+  name: "Kitty", 
+  color: "black"
+}, {
+  name: "Berlioz", 
+  color: "orange"
+}]
+
+const catsCopy = [...cats]; 

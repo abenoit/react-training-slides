@@ -48,7 +48,7 @@ export default (
     <Slide transition={["zoom"]} bgColor="primary">
       <Heading size={4}>Do both !</Heading>
       <Text padding="20px 0">
-        <b>ESLint</b> : code quality according to Airbnb code style base
+        <b>ESLint</b> : code quality using existing code style base
       </Text>
       <Text padding="20px 0">
         <b>Prettier</b> : code style
