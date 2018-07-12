@@ -69,7 +69,7 @@ export default (
           Disable "add" button if required fields are not filled
         </ListItem>
         <ListItem padding="20px 0" textColor="primary">
-          Display a message if no cats array is empty
+          Display a message if cats array is empty
         </ListItem>
       </List>
     </Slide>

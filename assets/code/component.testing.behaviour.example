@@ -1,0 +1,10 @@
+describe('Button', () => {
+  it('should call callback on click', () => {
+    const button = shallow(<Button />);
+    button.callback = jest.fn();
+
+    button.simulate('click');
+
+    expect(button.callback).toHaveBeenCalled();
+  });
+});

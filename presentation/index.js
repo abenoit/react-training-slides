@@ -4,6 +4,7 @@ import Tp1Exercices from "./exercices.tp1";
 import Tp2Exercices from "./exercices.tp2";
 import Tp3Exercices from "./exercices.tp3";
 import Tp4Exercices from "./exercices.tp4";
+import Tp5Exercices from "./exercices.tp5";
 import Tools from "./tools";
 import ES6 from "./es6";
 
@@ -40,6 +41,7 @@ export default class Presentation extends Component {
         {Tp2Exercices}
         {Tp3Exercices}
         {Tp4Exercices}
+        {Tp5Exercices}
       </Deck>
     );
   }
