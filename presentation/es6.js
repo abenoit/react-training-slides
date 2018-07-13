@@ -63,7 +63,7 @@ export default (
 
     <Slide transition={["zoom"]} bgColor="tertiary">
       <Heading size={4} textColor="primary" caps>
-        Spread operators
+        Spread operator
       </Heading>
       <CodePane
         textSize={25}
@@ -76,6 +76,18 @@ export default (
     <Slide transition={["zoom"]} bgColor="tertiary">
       <Heading size={4} textColor="primary" caps>
         Fetch, async, await
+      </Heading>
+      <CodePane
+        textSize={25}
+        transition={[]}
+        lang="javascript"
+        source={require("raw-loader!../assets/code/fetch.es6.example")}
+      />
+    </Slide>
+
+    <Slide transition={["zoom"]} bgColor="tertiary">
+      <Heading size={4} textColor="primary" caps>
+        Import / Export
       </Heading>
       <CodePane
         textSize={25}

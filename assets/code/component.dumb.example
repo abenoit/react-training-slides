@@ -1,0 +1,7 @@
+const Footer = props => (
+  <div>
+    <ul>
+      <li>Footer Information</li>
+    </ul>
+  </div>
+)

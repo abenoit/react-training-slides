@@ -27,7 +27,12 @@ const images = {
   separationOfConcerns: require("../assets/images/separationOfConcerns.png"),
   componentsEverywhere: require("../assets/images/componentsEverywhere.jpg"),
   todolist: require("../assets/images/todolist.jpg"),
-  todolistcomponents: require("../assets/images/componentstodolist.png")
+  todolistcomponents: require("../assets/images/componentstodolist.png"),
+  flow1: require("../assets/images/flow1.png"),
+  flow2: require("../assets/images/flow2.png"),
+  flow3: require("../assets/images/flow3.png"),
+  flow4: require("../assets/images/flow4.png"),
+  flow5: require("../assets/images/flow5.png")
 };
 
 preloader(images);
@@ -67,7 +72,7 @@ export default (
       <Heading size={4} textColor="primary" caps>
         Some stuff were pain in the a**
       </Heading>
-      <List>
+      <List textColor="primary">
         <ListItem padding="10px 0">Re-using some piece of code</ListItem>
         <ListItem padding="10px 0">
           HTML pages were big and hard to maintain
@@ -210,6 +215,38 @@ export default (
     </Slide>
 
     <Slide bgColor="primary">
+      <Heading size={4}>JSX</Heading>
+      <CodePane
+        margin="10px 0"
+        textSize={25}
+        transition={[]}
+        lang="javascript"
+        source="const element = <h1>Hello world!</h1>;"
+      />
+
+      <CodePane
+        textSize={25}
+        transition={[]}
+        lang="javascript"
+        source="const element =
+        <div>
+          <h1>Hello!</h1>
+          <h2>Good to see you here.</h2>
+        </div>;"
+      />
+    </Slide>
+
+    <Slide bgColor="primary">
+      <Heading size={4}>Injecting values</Heading>
+      <CodePane
+        textSize={25}
+        transition={[]}
+        lang="javascript"
+        source="const element = <h2>It is {new Date().toLocaleTimeString()}</h2>;"
+      />
+    </Slide>
+
+    <Slide bgColor="primary">
       <Heading size={4}>A normal component</Heading>
       <CodePane
         textSize={25}
@@ -237,6 +274,31 @@ export default (
         lang="javascript"
         source={require("raw-loader!../assets/code/componentComposition.example")}
       />
+    </Slide>
+
+    <Slide bgColor="primary">
+      <Heading size={4}>Data flows down </Heading>
+      <Image src={images.flow1} />
+    </Slide>
+
+    <Slide bgColor="primary">
+      <Heading size={4}>Data flows down </Heading>
+      <Image src={images.flow2} />
+    </Slide>
+
+    <Slide bgColor="primary">
+      <Heading size={4}>Data flows down </Heading>
+      <Image src={images.flow3} />
+    </Slide>
+
+    <Slide bgColor="primary">
+      <Heading size={4}>Data flows down </Heading>
+      <Image src={images.flow4} />
+    </Slide>
+
+    <Slide bgColor="primary">
+      <Heading size={4}>Data flows down </Heading>
+      <Image src={images.flow5} />
     </Slide>
   </SlideSet>
 );

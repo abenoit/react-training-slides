@@ -1,0 +1,10 @@
+// Wrong
+this.state.comment = 'Hello';
+
+// Correct
+this.setState({comment: 'Hello'});
+
+// Wrong
+this.setState({
+  counter: this.state.counter + this.props.increment,
+});

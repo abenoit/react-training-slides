@@ -85,7 +85,7 @@ export default (
 
     <Slide transition={["zoom"]} bgColor="tertiary">
       <Heading size={3} textColor="primary">
-        Snapshot testing
+        Behaviour testing
       </Heading>
       <CodePane
         textSize={18}
@@ -102,9 +102,6 @@ export default (
       <List ordered>
         <ListItem padding="20px 0" textColor="primary">
           Test all the things ! (Cats and CatForm)
-        </ListItem>
-        <ListItem padding="20px 0" textColor="primary">
-          Tip : use snapshot and shallow
         </ListItem>
       </List>
     </Slide>

@@ -1,0 +1,3 @@
+const Unicorn = props => <div className="Unicorn"> {props.name} </div>
+
+const Unicorn = { name } => <div className="Unicorn"> {name} </div>

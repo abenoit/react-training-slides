@@ -1,7 +1,7 @@
 // Fetch the exercices repository
-git clone TODO
+git clone git@github.com:abenoit/react-training-exercices.git
 
-cd react-exercices
+cd react-training-exercices
 
 // Install all the dependancies 
 npm install
