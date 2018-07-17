@@ -1,6 +1,3 @@
-import React, { Component } from "react";
-import PropTypes from 'prop-types';
-
 class Unicorn extends Component {
   constructor(props) {
     super(props);

@@ -35,6 +35,18 @@ export default (
 
     <Slide transition={["zoom"]} bgColor="tertiary">
       <Heading size={3} textColor="primary">
+        State
+      </Heading>
+      <CodePane
+        textSize={18}
+        transition={[]}
+        lang="javascript"
+        source={require("raw-loader!../assets/code/component.state.multiple.example")}
+      />
+    </Slide>
+
+    <Slide transition={["zoom"]} bgColor="tertiary">
+      <Heading size={3} textColor="primary">
         Exercice statement
       </Heading>
       <List ordered>
