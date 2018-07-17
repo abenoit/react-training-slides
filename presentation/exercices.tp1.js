@@ -23,6 +23,18 @@ export default (
 
     <Slide transition={["fade"]} bgColor="tertiary">
       <Heading size={4} textColor="primary" caps>
+        Multiple div as root
+      </Heading>
+      <CodePane
+        textSize={20}
+        transition={[]}
+        lang="javascript"
+        source={require("raw-loader!../assets/code/component.fragment.example")}
+      />
+    </Slide>
+
+    <Slide transition={["fade"]} bgColor="tertiary">
+      <Heading size={4} textColor="primary" caps>
         Instructions
       </Heading>
       <CodePane
