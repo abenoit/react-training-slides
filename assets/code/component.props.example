@@ -2,17 +2,13 @@ const propTypes = {
   name: PropTypes.string.isRequired
 }
 
-class Unicorn extends Component {
-  render() {
-    return 
-      <div> {this.props.name} </div>;
-  }
+class Unicorn = (props) => {
+  return <div> {props.name} </div>;
 }
 
 Unicorn.propTypes = propTypes;
 
-class Equestria extends Component {
-  render() {
-    return <Unicorn name="Pinkie pie"/>;
-  }
+
+const Equestria = () => {
+  return <Unicorn name="Pinkie pie" />;
 }

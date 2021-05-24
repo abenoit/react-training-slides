@@ -1,21 +1,16 @@
-class Unicorn extends Component {
-  constructor(props) {
-    super(props);
+import { useState } from "react";
 
-    this.state = {
-      flying: false
-    }
-  }
+const Unicorn = () => {
+  const [flying, setFlying] = useState(false); // init
 
   fly() {
-    this.setState({flying: true});
+    setFlying(true)
   }
 
-  render() {
-    return 
-      <div>
-        <button onclick={this.fly}> Fly </button>;
-        <p>{this.state.flying}</p>
-      </div>
-  }
+  return (
+    <div>
+      <button onclick={this.fly}> Fly </button>;
+      <p>{flying}</p>
+    </div>
+  );
 }

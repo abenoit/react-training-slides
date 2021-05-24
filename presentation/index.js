@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Introduction from "./introduction";
-import Tp1Exercices from "./exercices.tp1";
+import PropsExercice from "./exercices.tp1";
 import Tp2Exercices from "./exercices.tp2";
 import Tp3Exercices from "./exercices.tp3";
 import Tp4Exercices from "./exercices.tp4";
@@ -22,11 +22,11 @@ const theme = createTheme(
     primary: "white",
     secondary: "#1F2022",
     tertiary: "#03A9FC",
-    quarternary: "#CECECE"
+    quarternary: "#CECECE",
   },
   {
     primary: "Montserrat",
-    secondary: "Helvetica"
+    secondary: "Helvetica",
   }
 );
 
@@ -40,7 +40,7 @@ export default class Presentation extends Component {
         progress="pacman"
       >
         {Introduction}
-        {Tp1Exercices}
+        {PropsExercice}
         {Tools}
         {ES6}
         {Tp2Exercices}

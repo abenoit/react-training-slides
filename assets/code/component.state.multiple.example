@@ -1,6 +1,0 @@
-// Wrong
-this.setState({firstname: 'Pinkie'});
-this.setState({lastname: 'Pie'});
-
-// Correct
-this.setState({firstname: 'Pinkie', lastname: 'Pie'});

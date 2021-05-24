@@ -1,19 +1,7 @@
-class Equestria extends React.Component {
-    render() {
-        <React.Fragment>
-            <Unicorn name="Pinkie Pie" />
-            <Unicorn name="Rainbow dash" />
-            <Unicorn name="Twilight Sparkle" />
-        </React.Fragment>
-    }
-}
-
-class Equestria extends React.Component {
-    render() {
-        [
-            <Unicorn name="Pinkie Pie" key="1" />
-            <Unicorn name="Rainbow dash" key="2"/>
-            <Unicorn name="Twilight Sparkle" key="3"/>
-        ]
-    }
+const Equestria = () => {
+    <> // Or <React.Fragment>
+        <Unicorn name="Pinkie Pie" />
+        <Unicorn name="Rainbow dash" />
+        <Unicorn name="Twilight Sparkle" />
+    </>
 }

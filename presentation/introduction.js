@@ -7,7 +7,7 @@ import {
   ListItem,
   List,
   Slide,
-  Text
+  Text,
 } from "spectacle";
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
@@ -28,11 +28,12 @@ const images = {
   componentsEverywhere: require("../assets/images/componentsEverywhere.jpg"),
   todolist: require("../assets/images/todolist.jpg"),
   todolistcomponents: require("../assets/images/componentstodolist.png"),
+  flow: require("../assets/images/flow.png"),
   flow1: require("../assets/images/flow1.png"),
   flow2: require("../assets/images/flow2.png"),
   flow3: require("../assets/images/flow3.png"),
   flow4: require("../assets/images/flow4.png"),
-  flow5: require("../assets/images/flow5.png")
+  flow5: require("../assets/images/flow5.png"),
 };
 
 preloader(images);
@@ -152,6 +153,18 @@ export default (
     </Slide>
 
     <Slide bgColor="primary">
+      <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+        ⚠️ DISCLAIMER ⚠️
+      </Heading>
+      <Heading size={3} fit lineHeight={1} textColor="secondary">
+        ReactJS is written and used in / with ... Javascript
+      </Heading>
+      <Heading caps size={6} textColor="tertiary">
+        You <u>HAVE TO</u> learn JS to use it well.
+      </Heading>
+    </Slide>
+
+    <Slide bgColor="primary">
       <div style={{ display: "flex", alignItems: "center" }}>
         <Text textColor="tertiary" size={1} style={{ width: "33%" }}>
           <b>Open Source</b> Javascript library.
@@ -247,7 +260,17 @@ export default (
     </Slide>
 
     <Slide bgColor="primary">
-      <Heading size={4}>A normal component</Heading>
+      <Heading size={4}>Class component (legacy)</Heading>
+      <CodePane
+        textSize={25}
+        transition={[]}
+        lang="javascript"
+        source={require("raw-loader!../assets/code/component-legacy.example")}
+      />
+    </Slide>
+
+    <Slide bgColor="primary">
+      <Heading size={4}>Functional component</Heading>
       <CodePane
         textSize={25}
         transition={[]}
@@ -276,6 +299,42 @@ export default (
       />
     </Slide>
 
+    <Slide bgColor="tertiary">
+      <Heading textColor="primary" size={2}>
+        Data & data flow
+      </Heading>
+    </Slide>
+
+    <Slide bgColor="tertiary">
+      <Heading textColor="primary" size={4}>
+        Data can be...
+      </Heading>
+      <List textColor="primary">
+        <ListItem>A string</ListItem>
+        <ListItem>A number</ListItem>
+        <ListItem>An object</ListItem>
+        <ListItem>A function</ListItem>
+        <ListItem>pretty much anything</ListItem>
+      </List>
+    </Slide>
+
+    <Slide bgColor="primary">
+      <Heading size={4} caps>
+        Data flow
+      </Heading>
+      <Image src={images.flow} />
+    </Slide>
+
+    <Slide bgColor="primary">
+      <Heading size={4}>Event flow </Heading>
+      <CodePane
+        textSize={22}
+        transition={[]}
+        lang="javascript"
+        source={require("raw-loader!../assets/code/event-flow.example")}
+      />
+    </Slide>
+
     <Slide bgColor="primary">
       <Heading size={4}>Data flows down </Heading>
       <Image src={images.flow1} />
@@ -299,6 +358,21 @@ export default (
     <Slide bgColor="primary">
       <Heading size={4}>Data flows down </Heading>
       <Image src={images.flow5} />
+    </Slide>
+
+    <Slide bgColor="tertiary">
+      <Heading textColor="primary" size={4}>
+        How to start a project - useful first resources
+      </Heading>
+      <List>
+        <ListItem>ReactJs official website (docs, tuto...)</ListItem>
+        <ListItem textColor="primary">
+          <b>create-react-app</b> is a boilerplate powered by React team
+        </ListItem>
+        <ListItem textColor="primary">
+          <b>component libraries</b> (Paper, Material-ui)...
+        </ListItem>
+      </List>
     </Slide>
   </SlideSet>
 );

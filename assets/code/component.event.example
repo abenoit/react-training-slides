@@ -1,15 +1,9 @@
-import React, { Component } from "react";
-
-class Cat extends Component {
-
+const Cat = () => {
   meow() {
     console.log("Meooow !");
   }
 
-  render() {
-    return <button onclick={this.meow}> Meow ? </button>;
-  }
-
+  return <button onClick={meow}> Meow ? </button>;
 }
 
 export default Cat;

@@ -23,18 +23,6 @@ export default (
 
     <Slide transition={["fade"]} bgColor="tertiary">
       <Heading size={4} textColor="primary" caps>
-        Multiple div as root
-      </Heading>
-      <CodePane
-        textSize={20}
-        transition={[]}
-        lang="javascript"
-        source={require("raw-loader!../assets/code/component.fragment.example")}
-      />
-    </Slide>
-
-    <Slide transition={["fade"]} bgColor="tertiary">
-      <Heading size={4} textColor="primary" caps>
         Instructions
       </Heading>
       <CodePane
@@ -58,9 +46,14 @@ export default (
       <List ordered textColor="primary">
         <ListItem padding="20px 0">Create a cat in the App</ListItem>
         <ListItem padding="20px 0">
-          Use propTypes to make name, age and meows per hour variables
+          Use propTypes for defining
+          <List>
+            <ListItem>name</ListItem>
+            <ListItem>age</ListItem>
+            <ListItem>meows per hour</ListItem>
+          </List>
         </ListItem>
-        <ListItem padding="20px 0">Create different cats</ListItem>
+        <ListItem padding="20px 0">Create several cats</ListItem>
       </List>
     </Slide>
   </SlideSet>
