@@ -27,13 +27,13 @@ export default (
       </Heading>
       <List ordered>
         <ListItem padding="20px 0" textColor="primary">
-          Create a meows counter using Cat's state
+          Create a <b>meow counter</b> using Cat's state
         </ListItem>
         <ListItem padding="20px 0" textColor="primary">
-          Increment meows' counter each time the "Meow" button is clicked
+          Increment meow counter each time the "Meow" button is clicked
         </ListItem>
         <ListItem padding="20px 0" textColor="primary">
-          Meows are not permitted when meows reaches meowsPerHour
+          Counter stops incrementing when meows reaches maxMeows
         </ListItem>
         <ListItem padding="20px 0" textColor="primary">
           BONUS: set a special color if maximum meows is reached

@@ -1,8 +1,13 @@
-class Greeting extends Component {
-  render() {
-    {this.props.isLoggedIn ? 
+// condition ? [code when condition is true] : [code when condition is false]
+
+// Plain JS
+console.log(true ? "yes" : "no"); // yes
+
+// React 
+const Greeting = (props) => {
+    return props.isLoggedIn ? 
       <UserGreeting /> : 
-      <GuestGreeting />
+      <LoginButton />
     }
   }
 }

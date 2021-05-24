@@ -23,18 +23,6 @@ export default (
 
     <Slide transition={["zoom"]} bgColor="tertiary">
       <Heading size={3} textColor="primary">
-        Reference
-      </Heading>
-      <CodePane
-        textSize={18}
-        transition={[]}
-        lang="javascript"
-        source={require("raw-loader!../assets/code/component.reference.example")}
-      />
-    </Slide>
-
-    <Slide transition={["zoom"]} bgColor="tertiary">
-      <Heading size={3} textColor="primary">
         Uncontrolled input
       </Heading>
       <CodePane

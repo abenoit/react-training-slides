@@ -1,22 +1,16 @@
-class Form extends Component {
-  constructor() {
-    super();
-    
-    this.state = { name: '' };
-  }
+import { useState } from "react";
+
+const NameInput = () => {
+  const [name, setName] = useState('')
 
   handleNameChange = event => {
-    this.setState({ name: event.target.value });
+   setName(event.target.value);
   };
 
-  render() {
-    return (
-      <div>
-        <input
-          value={this.state.name}
-          onChange={this.handleNameChange}
-        />
-      </div>
-    );
-  }
+  return (
+    <input
+      value={name}
+      onChange={handleNameChange}
+    />
+  );
 }

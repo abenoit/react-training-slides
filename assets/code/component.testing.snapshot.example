@@ -1,6 +1,0 @@
-describe('Unicorn', () => {
-  it('should exist and render Unicorn', () => {
-    const unicorn = renderer.create(<Unicorn {...props} />).toJSON();
-    expect(unicorn).toMatchSnapshot();
-  });
-});

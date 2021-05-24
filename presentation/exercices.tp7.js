@@ -6,7 +6,7 @@ import {
   ListItem,
   SlideSet,
   Heading,
-  Slide
+  Slide,
 } from "spectacle";
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
@@ -82,24 +82,12 @@ export default (
     </Slide>
 
     <Slide transition={["zoom"]} bgColor="tertiary">
-      <Heading size={4} textColor="primary" caps>
-        Functionnal component
-      </Heading>
-      <CodePane
-        textSize={20}
-        transition={[]}
-        lang="javascript"
-        source={require("raw-loader!../assets/code/component.functionnal.example")}
-      />
-    </Slide>
-
-    <Slide transition={["zoom"]} bgColor="tertiary">
       <Heading size={3} textColor="primary">
         Exercice statement
       </Heading>
       <List ordered>
         <ListItem padding="20px 0" textColor="primary">
-          Transform Cat into a functionnal component
+          Transform Cat into a dumb component
         </ListItem>
         <ListItem padding="20px 0" textColor="primary">
           Check the tests

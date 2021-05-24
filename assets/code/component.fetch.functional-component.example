@@ -1,0 +1,14 @@
+// Hook style
+const App = () => {
+  const [cats, setCats] = useState([]);
+  const [isLoading, setLoading] = useState(true);
+
+
+  useEffect() {
+    // componentDidMount
+  }
+
+  render () {
+    {isLoading ? <Loader /> : cats.map(cat => <Cat />)}
+  }
+}

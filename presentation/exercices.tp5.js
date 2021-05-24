@@ -6,14 +6,14 @@ import {
   ListItem,
   SlideSet,
   Heading,
-  Slide
+  Slide,
 } from "spectacle";
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
 
 const images = {
   jest: require("../assets/images/jest.png"),
-  enzyme: require("../assets/images/jestenzyme.jpg")
+  enzyme: require("../assets/images/jestenzyme.jpg"),
 };
 
 preloader(images);
@@ -57,18 +57,6 @@ export default (
           Provides utilities to test React components (find, shallow, mount...)
         </ListItem>
       </List>
-    </Slide>
-
-    <Slide transition={["zoom"]} bgColor="tertiary">
-      <Heading size={3} textColor="primary">
-        Snapshot testing
-      </Heading>
-      <CodePane
-        textSize={18}
-        transition={[]}
-        lang="javascript"
-        source={require("raw-loader!../assets/code/component.testing.snapshot.example")}
-      />
     </Slide>
 
     <Slide transition={["zoom"]} bgColor="tertiary">

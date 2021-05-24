@@ -6,7 +6,7 @@ import {
   ListItem,
   SlideSet,
   Heading,
-  Slide
+  Slide,
 } from "spectacle";
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
@@ -21,6 +21,18 @@ export default (
       <Heading size={4} textColor="secondary" caps>
         &lt; Let's TP6 /&gt;
       </Heading>
+    </Slide>
+
+    <Slide transition={["zoom"]} bgColor="primary">
+      <Heading size={4} textColor="secondary" caps>
+        Class component
+      </Heading>
+      <CodePane
+        textSize={18}
+        transition={[]}
+        lang="javascript"
+        source={require("raw-loader!../assets/code/class-component.example")}
+      />
     </Slide>
 
     <Slide transition={["zoom"]} bgColor="primary">
@@ -77,13 +89,43 @@ export default (
 
     <Slide transition={["zoom"]} bgColor="primary">
       <Heading size={3} textColor="secondary">
-        Fetch data
+        Lifecycle with hooks
       </Heading>
       <CodePane
         textSize={18}
         transition={[]}
         lang="javascript"
-        source={require("raw-loader!../assets/code/component.fetch.example")}
+        source={require("raw-loader!../assets/code/component-hooks.example")}
+      />
+    </Slide>
+
+    <Slide transition={["zoom"]} bgColor="primary">
+      <Heading size={3} textColor="secondary">
+        Fetch data
+      </Heading>
+      <Heading size={6} textColor="secondary">
+        Class components
+      </Heading>
+      <CodePane
+        textSize={18}
+        transition={[]}
+        lang="javascript"
+        source={require("raw-loader!../assets/code/component.fetch.class-component.example")}
+      />
+    </Slide>
+
+    <Slide transition={["zoom"]} bgColor="primary">
+      <Heading size={3} textColor="secondary">
+        Fetch data
+      </Heading>
+      <Heading size={6} textColor="secondary">
+        Functional components
+      </Heading>
+      <CodePane
+        textSize={18}
+        transition={[]}
+        lang="javascript"
+        source={require("raw-loader!../assets/code/component.fetch.functional-component.example")}
       />
     </Slide>
 

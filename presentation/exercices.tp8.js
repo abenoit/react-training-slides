@@ -29,7 +29,7 @@ export default (
         textSize={20}
         transition={[]}
         lang="javascript"
-        source="const {Provider, Consumer} = React.createContext(defaultValue);"
+        source="const MyContext = React.createContext(defaultValue);"
       />
     </Slide>
 
@@ -41,7 +41,7 @@ export default (
         textSize={20}
         transition={[]}
         lang="javascript"
-        source="<Provider value={/* some value */}>"
+        source="<MyContext.Provider value={/* some value */}>"
       />
     </Slide>
 
@@ -49,13 +49,26 @@ export default (
       <Heading size={4} textColor="primary" caps>
         Consumer
       </Heading>
+      <Heading size={6} textColor="primary">
+        High order component
+      </Heading>
       <CodePane
         textSize={20}
         transition={[]}
         lang="javascript"
-        source="<Consumer>
+        source="<MyContext.Consumer>
           {value => /* render something based on the context value */}
-        </Consumer>"
+        </MyContext.Consumer>"
+      />
+      <Heading size={6} textColor="primary">
+        Hook
+      </Heading>
+      <CodePane
+        textSize={20}
+        transition={[]}
+        lang="javascript"
+        source="const context = useContext(myContext);
+          console.log(context.value);"
       />
     </Slide>
 
