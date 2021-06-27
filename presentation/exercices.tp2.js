@@ -6,7 +6,7 @@ import {
   SlideSet,
   Heading,
   Slide,
-  Text
+  Text,
 } from "spectacle";
 
 export default (
@@ -26,18 +26,14 @@ export default (
         textSize={25}
         transition={[]}
         lang="javascript"
-        source="render() {
-          return <div className=&quot;myComponentClass&quot;/>
-        }"
+        source='return <div className="myComponentClass"/>'
       />
       <Text padding="20px 0">2. Attribute style</Text>
       <CodePane
         textSize={25}
         transition={[]}
         lang="javascript"
-        source="render() {
-          return <div style={{fontSize: &quot;1.5em&quot;}}/>
-        }"
+        source='return <div style={{fontSize: "1.5em"}}/>'
       />
     </Slide>
 
@@ -50,9 +46,9 @@ export default (
         textSize={25}
         transition={[]}
         lang="javascript"
-        source="render() {
-          return this.props.cats.map(cat => <span>{cat.name}</span>)
-        }"
+        source={`return props.cats.map(cat => ({
+            <span>{cat.name}</span>
+          })`}
       />
     </Slide>
 

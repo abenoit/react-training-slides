@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  CodePane,
-  Image,
-  List,
-  ListItem,
-  SlideSet,
-  Heading,
-  Slide,
-} from "spectacle";
+import { CodePane, List, ListItem, SlideSet, Heading, Slide } from "spectacle";
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
 

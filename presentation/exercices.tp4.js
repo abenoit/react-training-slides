@@ -16,7 +16,7 @@ export default (
       <CodePane
         textSize={18}
         transition={[]}
-        lang="javascript"
+        lang="jsx"
         source={require("raw-loader!../assets/code/component.conditional.example")}
       />
     </Slide>
@@ -28,7 +28,7 @@ export default (
       <CodePane
         textSize={18}
         transition={[]}
-        lang="javascript"
+        lang="jsx"
         source={require("raw-loader!../assets/code/input.uncontrolled.example")}
       />
     </Slide>
@@ -40,7 +40,7 @@ export default (
       <CodePane
         textSize={18}
         transition={[]}
-        lang="javascript"
+        lang="jsx"
         source={require("raw-loader!../assets/code/input.controlled.example")}
       />
     </Slide>

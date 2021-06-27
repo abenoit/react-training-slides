@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Appear,
   CodePane,
   SlideSet,
   Image,
@@ -13,6 +14,10 @@ import {
 import preloader from "spectacle/lib/utils/preloader";
 
 const images = {
+  busbud: require("../assets/images/companies/logo-busbud.png"),
+  lectra: require("../assets/images/companies/logo-lectra.jpg"),
+  ubisoft: require("../assets/images/companies/logo-ubisoft.png"),
+  atinternet: require("../assets/images/companies/logo-atinternet.png"),
   handlabars: require("../assets/images/handlebars.png"),
   twig: require("../assets/images/twig.jpg"),
   mustache: require("../assets/images/mustache.jpg"),
@@ -28,15 +33,22 @@ const images = {
   componentsEverywhere: require("../assets/images/componentsEverywhere.jpg"),
   todolist: require("../assets/images/todolist.jpg"),
   todolistcomponents: require("../assets/images/componentstodolist.png"),
-  flow: require("../assets/images/flow.png"),
-  flow1: require("../assets/images/flow1.png"),
-  flow2: require("../assets/images/flow2.png"),
-  flow3: require("../assets/images/flow3.png"),
-  flow4: require("../assets/images/flow4.png"),
-  flow5: require("../assets/images/flow5.png"),
+  globalflow: require("../assets/images/flow.png"),
+  flow: require("../assets/images/event-flow/event-flow0.png"),
+  flow1: require("../assets/images/event-flow/event-flow1.png"),
+  flow2: require("../assets/images/event-flow/event-flow2.png"),
+  flow3: require("../assets/images/event-flow/event-flow3.png"),
+  dataflow: require("../assets/images/props.png"),
+  state: require("../assets/images/props+state.png"),
 };
 
 preloader(images);
+
+const peronalItemStyle = {
+  display: "flex",
+  alignItems: "center",
+  margin: "24px 0",
+};
 
 export default (
   <SlideSet>
@@ -48,19 +60,84 @@ export default (
         A journey into reactJS library
       </Text>
       <Text margin="10px 0 0" textColor="quarternary" size={0.5} bold>
-        made with <i className="material-icons">favorite_border</i> by Amélie
+        made with 💙 by Amélie
       </Text>
     </Slide>
 
     <Slide transition={["zoom"]} bgColor="primary">
-      <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-        What I am going to talk about
+      <Heading size={2} caps lineHeight={1} textColor="tertiary">
+        Agenda
       </Heading>
       <List>
-        <ListItem>What is React ?</ListItem>
-        <ListItem>Why React ?</ListItem>
-        <ListItem>Let's practice !</ListItem>
+        <ListItem>Self presentation</ListItem>
+        <ListItem>What is React?</ListItem>
+        <ListItem>Why React?</ListItem>
+        <ListItem>Let's practice!</ListItem>
       </List>
+    </Slide>
+
+    <Slide>
+      <Heading size={2} caps lineHeight={1} textColor="secondary">
+        Why am I here
+      </Heading>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+        }}
+      >
+        <Appear>
+          <div color="secondary" style={peronalItemStyle}>
+            <Text>🚌 Working with React at</Text>
+            <Image
+              src={images.busbud}
+              width="200px"
+              style={{ padding: 0, margin: 0, marginLeft: 16 }}
+            />
+          </div>
+        </Appear>
+
+        <Appear>
+          <div color="secondary" style={peronalItemStyle}>
+            <Text>🎮 Worked with React Native at</Text>
+            <Image
+              src={images.ubisoft}
+              width="200px"
+              style={{ padding: 0, margin: 0, marginLeft: 16 }}
+            />
+          </div>
+        </Appear>
+
+        <Appear>
+          <div color="secondary" style={peronalItemStyle}>
+            <Text>👗 Worked with React at</Text>
+            <Image
+              src={images.lectra}
+              width="200px"
+              style={{ padding: 0, margin: 0, marginLeft: 16 }}
+            />
+          </div>
+        </Appear>
+
+        <Appear>
+          <div color="secondary" style={peronalItemStyle}>
+            <Text>📊 Worked with AngularJS at</Text>
+            <Image
+              src={images.atinternet}
+              width="200px"
+              style={{ padding: 0, margin: 0, marginLeft: 16 }}
+            />
+          </div>
+        </Appear>
+
+        <Appear>
+          <Text textColor="tertiary">
+            Organizer of React & React Native Bordeaux Meetups
+          </Text>
+        </Appear>
+      </div>
     </Slide>
 
     <Slide bgColor="primary">
@@ -92,9 +169,9 @@ export default (
         Bind data to HTML
       </Heading>
       <CodePane
-        textSize={30}
-        transition={[]}
+        textSize={24}
         lang="javascript"
+        highlightRanges={[[1], [2]]}
         source={require("raw-loader!../assets/code/old.data.example")}
       />
     </Slide>
@@ -104,7 +181,7 @@ export default (
         Events management
       </Heading>
       <CodePane
-        textSize={30}
+        textSize={24}
         transition={[]}
         lang="javascript"
         source={require("raw-loader!../assets/code/old.events.example")}
@@ -113,7 +190,7 @@ export default (
 
     <Slide transition={["fade"]} bgColor="tertiary">
       <Heading size={4} textColor="primary" caps>
-        Libraries helped a little
+        Libraries were born to compensate
       </Heading>
       <div style={{ display: "flex" }}>
         <Image src={images.jquery} width="150px" height="150px" />
@@ -233,19 +310,18 @@ export default (
         margin="10px 0"
         textSize={25}
         transition={[]}
-        lang="javascript"
+        lang="jsx"
         source="const element = <h1>Hello world!</h1>;"
       />
 
       <CodePane
         textSize={25}
         transition={[]}
-        lang="javascript"
-        source="const element =
-        <div>
+        lang="jsx"
+        source={`const element = (<div>
           <h1>Hello!</h1>
           <h2>Good to see you here.</h2>
-        </div>;"
+        </div>);`}
       />
     </Slide>
 
@@ -254,8 +330,8 @@ export default (
       <CodePane
         textSize={25}
         transition={[]}
-        lang="javascript"
-        source="const element = <h2>It is {new Date().toLocaleTimeString()}</h2>;"
+        lang="jsx"
+        source="const date = <p>It is {new Date().toLocaleTimeString()}</p>;"
       />
     </Slide>
 
@@ -264,7 +340,7 @@ export default (
       <CodePane
         textSize={25}
         transition={[]}
-        lang="javascript"
+        lang="jsx"
         source={require("raw-loader!../assets/code/component-legacy.example")}
       />
     </Slide>
@@ -274,7 +350,7 @@ export default (
       <CodePane
         textSize={25}
         transition={[]}
-        lang="javascript"
+        lang="jsx"
         source={require("raw-loader!../assets/code/component.example")}
       />
     </Slide>
@@ -284,7 +360,7 @@ export default (
       <CodePane
         textSize={20}
         transition={[]}
-        lang="javascript"
+        lang="jsx"
         source={require("raw-loader!../assets/code/component2.example")}
       />
     </Slide>
@@ -294,7 +370,7 @@ export default (
       <CodePane
         textSize={22}
         transition={[]}
-        lang="javascript"
+        lang="jsx"
         source={require("raw-loader!../assets/code/componentComposition.example")}
       />
     </Slide>
@@ -322,11 +398,40 @@ export default (
       <Heading size={4} caps>
         Data flow
       </Heading>
-      <Image src={images.flow} />
+      <Image src={images.globalflow} />
     </Slide>
 
     <Slide bgColor="primary">
-      <Heading size={4}>Event flow </Heading>
+      <Heading size={4} caps>
+        Data flow - Props
+      </Heading>
+      <Image src={images.dataflow} />
+    </Slide>
+
+    <Slide bgColor="primary">
+      <Heading size={4} caps>
+        Data flow - Props and state
+      </Heading>
+      <Image src={images.state} />
+    </Slide>
+
+    <Slide bgColor="primary">
+      <Heading size={4}>Events go up </Heading>
+      <Image src={images.flow1} />
+    </Slide>
+
+    <Slide bgColor="primary">
+      <Heading size={4}>Events go up </Heading>
+      <Image src={images.flow2} />
+    </Slide>
+
+    <Slide bgColor="primary">
+      <Heading size={4}>Events go up </Heading>
+      <Image src={images.flow3} />
+    </Slide>
+
+    <Slide bgColor="primary">
+      <Heading size={4}>Event flow</Heading>
       <CodePane
         textSize={22}
         transition={[]}
@@ -335,37 +440,14 @@ export default (
       />
     </Slide>
 
-    <Slide bgColor="primary">
-      <Heading size={4}>Data flows down </Heading>
-      <Image src={images.flow1} />
-    </Slide>
-
-    <Slide bgColor="primary">
-      <Heading size={4}>Data flows down </Heading>
-      <Image src={images.flow2} />
-    </Slide>
-
-    <Slide bgColor="primary">
-      <Heading size={4}>Data flows down </Heading>
-      <Image src={images.flow3} />
-    </Slide>
-
-    <Slide bgColor="primary">
-      <Heading size={4}>Data flows down </Heading>
-      <Image src={images.flow4} />
-    </Slide>
-
-    <Slide bgColor="primary">
-      <Heading size={4}>Data flows down </Heading>
-      <Image src={images.flow5} />
-    </Slide>
-
     <Slide bgColor="tertiary">
       <Heading textColor="primary" size={4}>
         How to start a project - useful first resources
       </Heading>
       <List>
-        <ListItem>ReactJs official website (docs, tuto...)</ListItem>
+        <ListItem textColor="primary">
+          ReactJs official website (docs, tuto...)
+        </ListItem>
         <ListItem textColor="primary">
           <b>create-react-app</b> is a boilerplate powered by React team
         </ListItem>

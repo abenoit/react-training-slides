@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Introduction from "./introduction";
-import PropsExercice from "./exercices.tp1";
+import Tp1Excercices from "./exercices.tp1";
 import Tp2Exercices from "./exercices.tp2";
 import Tp3Exercices from "./exercices.tp3";
 import Tp4Exercices from "./exercices.tp4";
@@ -40,7 +40,7 @@ export default class Presentation extends Component {
         progress="pacman"
       >
         {Introduction}
-        {PropsExercice}
+        {Tp1Excercices}
         {Tools}
         {ES6}
         {Tp2Exercices}

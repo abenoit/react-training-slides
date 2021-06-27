@@ -1,5 +1,13 @@
 import React from "react";
-import { CodePane, List, ListItem, SlideSet, Heading, Slide } from "spectacle";
+import {
+  CodePane,
+  List,
+  ListItem,
+  SlideSet,
+  Heading,
+  Slide,
+  Text,
+} from "spectacle";
 
 export default (
   <SlideSet>
@@ -16,21 +24,24 @@ export default (
       <CodePane
         textSize={20}
         transition={[]}
-        lang="javascript"
+        lang="jsx"
         source={require("raw-loader!../assets/code/component.props.example")}
       />
     </Slide>
 
     <Slide transition={["fade"]} bgColor="tertiary">
-      <Heading size={4} textColor="primary" caps>
+      <Heading
+        size={4}
+        textColor="primary"
+        caps
+        style={{ paddingBottom: "42px" }}
+      >
         Instructions
       </Heading>
-      <CodePane
-        textSize={25}
-        transition={[]}
-        lang="javascript"
-        source={require("raw-loader!../assets/code/instructions")}
-      />
+      <Text textColor="primary">Go to CodeSandbox, TP1:</Text>
+      <Text textColor="primary">
+        <b>https://codesandbox.io/s/react-training-stage-1-kg7tc</b>
+      </Text>
     </Slide>
 
     <Slide transition={["zoom"]} bgColor="tertiary">

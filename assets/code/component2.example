@@ -9,7 +9,7 @@ const defaultProps = {
 
 const Unicorn = (props) => ( 
   <div>
-    Hi there, I am {this.props.name} and I am {this.props.color}
+    Hi there, I am {props.name} and I am {props.color}
   </div>
 );
 
