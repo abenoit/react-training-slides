@@ -4,6 +4,12 @@ import { List, ListItem, SlideSet, Heading, Slide, Link } from "spectacle";
 export default (
   <SlideSet>
     <Slide transition={["zoom"]} bgColor="tertiary">
+      <Heading size={1} textColor="primary" caps>
+        Going further with React
+      </Heading>
+    </Slide>
+
+    <Slide transition={["zoom"]} bgColor="tertiary">
       <Heading size={4} textColor="primary" caps>
         Storybook
       </Heading>
@@ -27,6 +33,30 @@ export default (
         <ListItem padding="20px 0">
           <Link href="https://redux.js.org/introduction/core-concepts">
             Core concepts
+          </Link>
+        </ListItem>
+      </List>
+    </Slide>
+
+    <Slide transition={["zoom"]} bgColor="tertiary">
+      <Heading size={4} textColor="primary" caps>
+        Language
+      </Heading>
+      <List textColor="primary">
+        <ListItem padding="20px 0">Typescript</ListItem>
+        <ListItem padding="20px 0">ReScript</ListItem>
+      </List>
+    </Slide>
+
+    <Slide>
+      <Heading size={4} textColor="primary" caps>
+        Resources
+      </Heading>
+      <List textColor="primary">
+        <ListItem padding="20px 0">ReactJS Official website</ListItem>
+        <ListItem padding="20px 0">
+          <Link href="https://github.com/enaqx/awesome-react">
+            Awesome list
           </Link>
         </ListItem>
       </List>
