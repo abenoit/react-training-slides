@@ -48,7 +48,7 @@ export default (
       </List>
     </Slide>
 
-    <Slide>
+    <Slide bgColor="tertiary">
       <Heading size={4} textColor="primary" caps>
         Resources
       </Heading>
