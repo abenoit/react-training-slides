@@ -1,0 +1,18 @@
+const cat = {
+  name: "Kitty", 
+  age: 2, 
+  color: "black"
+}
+
+const {color, ...rest} = cat;
+console.log(rest); // { name: "Kitty", age: 2 }
+
+const cats = [{
+  name: "Kitty", 
+  color: "black"
+}, {
+  name: "Berlioz", 
+  color: "orange"
+}]
+
+const catsCopy = [...cats]; 

@@ -1,0 +1,13 @@
+const CustomButton = (props) => (
+  <button onClick={props.click}> 
+    Click me! 
+  </button>
+);
+
+const App = () => {
+  const handleClick = () => {
+    console.log("Custom button was clicked");
+  }
+
+  return <CustomButton click={handleClick} />
+}

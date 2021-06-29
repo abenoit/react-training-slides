@@ -1,0 +1,15 @@
+// Fetch the exercices repository
+git clone git@github.com:abenoit/react-training-exercices.git
+
+cd react-training-exercices
+
+// Install all the dependancies 
+npm install
+
+// Let's begin at the beginning
+git checkout tp1
+
+// Go go go ! 
+npm start
+
+// --> http://localhost:3000

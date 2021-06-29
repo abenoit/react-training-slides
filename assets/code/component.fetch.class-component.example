@@ -1,0 +1,19 @@
+class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      cats : [],
+      loading: true
+    }
+  }
+
+  componentDidMount() {
+    // Fetch cats and set them in the state
+    // set state.loading to false
+  }
+
+  render () {
+    {this.state.loading ? <Loader /> : this.state.cats.map(cat => <Cat />)}
+  }
+}

@@ -1,0 +1,7 @@
+const Equestria = () => {
+    <> // Or <React.Fragment>
+        <Unicorn name="Pinkie Pie" />
+        <Unicorn name="Rainbow dash" />
+        <Unicorn name="Twilight Sparkle" />
+    </>
+}

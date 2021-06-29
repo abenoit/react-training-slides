@@ -1,0 +1,14 @@
+const propTypes = {
+  name: PropTypes.string.isRequired
+}
+
+class Unicorn = (props) => {
+  return <div> {props.name} </div>;
+}
+
+Unicorn.propTypes = propTypes;
+
+
+const Equestria = () => {
+  return <Unicorn name="Pinkie pie" />;
+}
