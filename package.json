@@ -1,5 +1,5 @@
 {
-  "name": "spectacle-boilerplate",
+  "name": "react_training_slides",
   "version": "1.0.1",
   "description": "ReactJS Powered Presentation Framework",
   "main": "lib/index.js",
@@ -8,7 +8,7 @@
     "clean": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
     "lint": "eslint --ext .js,.jsx .",
-    "deploy": "gh-pages -d dist", 
+    "gh-deploy": "gh-pages -d dist", 
     "export": "spectacle-renderer --delay 3000",
     "start": "cross-env NODE_ENV=development node server.js"
   },
