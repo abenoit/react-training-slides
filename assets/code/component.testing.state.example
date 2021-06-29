@@ -1,0 +1,11 @@
+describe('Counter', () => {
+  it('should increment state', () => {
+    const counter = shallow(<Counter />);
+    const initialValue = counter.state("value");
+
+    counter.increment();
+
+    expect(initialValue).toEqual(0);
+    expect(counter.state("value")).toEqual(1);
+  });
+});

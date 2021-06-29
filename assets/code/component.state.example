@@ -1,0 +1,16 @@
+import { useState } from "react";
+
+const Unicorn = () => {
+  const [flying, setFlying] = useState(false); // init
+
+  fly() {
+    setFlying(true)
+  }
+
+  return (
+    <div>
+      <button onclick={this.fly}> Fly </button>;
+      <p>{flying}</p>
+    </div>
+  );
+}
