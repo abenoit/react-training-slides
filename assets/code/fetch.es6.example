@@ -1,5 +1,0 @@
-// await response of fetch call
-const response = await fetch('https://api.github.com');
-
-// only proceed once promise is resolved
-const data = await response.json();

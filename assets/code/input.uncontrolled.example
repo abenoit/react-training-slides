@@ -1,7 +1,0 @@
-const NameInput = (props) => {
-  return (
-    <div>
-      <input type="text" value={props.name} onChange={props.onChange} />
-    </div>
-  );
-}

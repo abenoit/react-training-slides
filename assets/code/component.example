@@ -1,4 +1,0 @@
-// Import not even necessary since React 17
-import React from "react"; 
-
-const Unicorn = () => (<div> Twilight Sparkle </div>);

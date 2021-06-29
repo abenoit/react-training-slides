@@ -1,9 +1,0 @@
-render() {
-  return (
-    <div>
-      <input ref={email => this.email = email} type="email" />
-    </div>
-  );
-}
-
-// input is accessible in component by this.email 

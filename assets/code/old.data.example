@@ -1,3 +1,0 @@
-  const myDomElt = document.getElementById("span-id");
-  
-  myDomElt.innerHTML = "hello world !"

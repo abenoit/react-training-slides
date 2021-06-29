@@ -1,5 +1,0 @@
-  var myDomElt = document.getElementById("button-id");
-  
-  myDomElt.addEventListener("click", function(event) {
-    console.log("I have been clicked !");
-  });

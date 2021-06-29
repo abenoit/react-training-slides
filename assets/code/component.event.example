@@ -1,9 +1,0 @@
-const Cat = () => {
-  meow() {
-    console.log("Meooow !");
-  }
-
-  return <button onClick={meow}> Meow ? </button>;
-}
-
-export default Cat;
